@@ -1,0 +1,200 @@
+.container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.search-container {
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.movie-heading,
+.favorites-heading,
+h1.heading {
+  margin: 0;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333; /* Set your preferred color */
+}
+
+.movie-heading,
+.favorites-heading {
+  font-size: large;
+}
+
+.search-input {
+  width: 90%;
+  padding: 10px;
+  font-size: 16px;
+  margin: 0 auto; /* Add margin auto to center horizontally */
+  display: block; /* Ensure it takes up the full width */
+  text-align: center; /* Align the text at the center */
+}
+
+.loading {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.error-popup {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+}
+
+.error-popup p {
+  margin: 0;
+  flex-grow: 1;
+}
+
+.error-popup button {
+  background-color: #721c24;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.error-popup button:hover {
+  background-color: #c71f32;
+}
+
+.movies-list,
+.favorites-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie-item,
+.favorite-item {
+  flex: 0 0 calc(30% - 20px);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  border: 1px solid #000000;
+  position: relative;
+  margin-right: 5px;
+}
+
+.movie-poster,
+.favorite-poster {
+  max-height: 300px;
+  min-width: 250px;
+  margin-bottom: 10px;
+}
+
+.movie-details,
+.favorite-details {
+  flex-grow: 1;
+}
+
+.movie-title,
+.favorite-title,
+.movie-year,
+.favorite-year {
+  margin: 0;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.movie-overlay,
+.favorite-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.movie-item:hover .movie-overlay,
+.favorite-item:hover .favorite-overlay {
+  opacity: 1;
+}
+
+.movie-overlay-content,
+.favorite-overlay-content {
+  text-align: center;
+  padding: 10px;
+}
+
+.add-button,
+.remove-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.add-button,
+.remove-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Add opacity transition */
+}
+
+.add-button {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.remove-button {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.add-button.scale-in,
+.remove-button.scale-in {
+  transform: scale(1);
+  opacity: 1; /* Change opacity to 1 */
+}
+
+.favorites-list {
+  list-style-type: none;
+  padding: 0;
+}
+.favorite-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+.no-favorites {
+  text-align: center;
+}
